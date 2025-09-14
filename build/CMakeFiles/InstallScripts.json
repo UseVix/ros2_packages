@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/risalinux/compression_ws/src/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
