@@ -21,9 +21,6 @@
 [submodule "ouster-ros-extras"]
   path = ouster-ros-extras
   url = https://github.com/ouster-lidar/ouster-ros-extras.git
-[submodule "point_cloud_transport_tutorial"]
-  path = point_cloud_transport_tutorial
-  url = https://github.com/ros-perception/point_cloud_transport_tutorial.git
 [submodule "ros2bag_extensions"]
   path = ros2bag_extensions
   url = https://github.com/tier4/ros2bag_extensions.git
