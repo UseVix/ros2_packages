@@ -1,0 +1,34 @@
+[submodule "cloudini"]
+  path = cloudini
+  url = https://github.com/UseVix/cloudini.git
+ 
+[submodule "kiss-icp"]
+  path = kiss-icp
+  url = https://github.com/UseVix/kiss-icp.git
+[submodule "point_cloud_transport"]
+  path = point_cloud_transport
+  url = https://githubgithub.com/UseVix/point_cloud_transport.git
+
+[submodule "point_cloud_transport_plugins"]
+  path = point_cloud_transport_plugins
+  url = https://github.com/UseVix/point_cloud_transport_plugins.git
+[submodule "kinematic-icp"]
+  path = kinematic-icp
+  url = https://github.com/PRBonn/kinematic-icp.git
+[submodule "ouster-ros"]
+  path = ouster-ros       # if needed
+  url = https://github.com/ouster-lidar/ouster-ros.git
+[submodule "ouster-ros-extras"]
+  path = ouster-ros-extras
+  url = https://github.com/ouster-lidar/ouster-ros-extras.git
+[submodule "point_cloud_transport_tutorial"]
+  path = point_cloud_transport_tutorial
+  url = https://github.com/ros-perception/point_cloud_transport_tutorial.git
+[submodule "ros2bag_extensions"]
+  path = ros2bag_extensions
+  url = https://github.com/tier4/ros2bag_extensions.git
+[submodule "rospy_message_converter"]
+  path = rospy_message_converter
+  url = https://github.com/DFKI-NI/rospy_message_converter.git
+
+
