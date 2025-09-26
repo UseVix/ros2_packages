@@ -7,7 +7,7 @@
   url = https://github.com/UseVix/kiss-icp
 [submodule "point_cloud_transport"]
   path = point_cloud_transport
-  url = https://githubgithub.com/UseVix/point_cloud_transport
+  url = https://github.com/UseVix/point_cloud_transport
 
 [submodule "point_cloud_transport_plugins"]
   path = point_cloud_transport_plugins
