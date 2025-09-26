@@ -1,17 +1,17 @@
 [submodule "cloudini"]
   path = cloudini
-  url = https://github.com/UseVix/cloudini.git
+  url = https://github.com/UseVix/cloudini
  
 [submodule "kiss-icp"]
   path = kiss-icp
-  url = https://github.com/UseVix/kiss-icp.git
+  url = https://github.com/UseVix/kiss-icp
 [submodule "point_cloud_transport"]
   path = point_cloud_transport
-  url = https://githubgithub.com/UseVix/point_cloud_transport.git
+  url = https://githubgithub.com/UseVix/point_cloud_transport
 
 [submodule "point_cloud_transport_plugins"]
   path = point_cloud_transport_plugins
-  url = https://github.com/UseVix/point_cloud_transport_plugins.git
+  url = https://github.com/UseVix/point_cloud_transport_plugins
 [submodule "kinematic-icp"]
   path = kinematic-icp
   url = https://github.com/PRBonn/kinematic-icp.git
