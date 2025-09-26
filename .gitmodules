@@ -14,7 +14,7 @@
   url = https://github.com/UseVix/point_cloud_transport_plugins
 [submodule "kinematic-icp"]
   path = kinematic-icp
-  url = https://github.com/PRBonn/kinematic-icp.git
+  url = https://github.com/UseVix/kinematic-icp
 [submodule "ouster-ros"]
   path = ouster-ros       # if needed
   url = https://github.com/ouster-lidar/ouster-ros.git
