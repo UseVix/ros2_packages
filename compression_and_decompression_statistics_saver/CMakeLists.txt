@@ -15,6 +15,7 @@ find_package(cloudini_ros REQUIRED)
 find_package(zlib_point_cloud_transport REQUIRED)
 find_package(zstd_point_cloud_transport REQUIRED)
 find_package(draco_point_cloud_transport REQUIRED)
+find_package(pluginlib REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
