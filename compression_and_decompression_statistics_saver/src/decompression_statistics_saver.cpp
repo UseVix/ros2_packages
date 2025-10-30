@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream> 
 #include <point_cloud_interfaces/msg/compressed_point_cloud2.hpp>
+#include <point_cloud_transport/point_cloud_codec.hpp>
+#include <sensor_msgs/msg/point_cloud2.hpp>
 /*
 std::string global_name, relative_name, default_param;
    3 if (nh.getParam("/global_name", global_name))
