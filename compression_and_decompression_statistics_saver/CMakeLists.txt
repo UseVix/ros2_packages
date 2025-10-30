@@ -33,7 +33,7 @@ endif()
 ament_package()
 
 add_executable(decompression_statistics_saver src/decompression_statistics_saver.cpp)
-ament_target_dependencies(decompression_statistics_saver rclcpp rosbag2_transport sensor_msgs point_cloud_interfaces point_cloud_transport)
+ament_target_dependencies(decompression_statistics_saver rclcpp rosbag2_transport sensor_msgs point_cloud_interfaces point_cloud_transport draco_point_cloud_transport)
 
 install(TARGETS
   decompression_statistics_saver
