@@ -23,7 +23,7 @@ int callback(const point_cloud_interfaces::msg::CompressedPointCloud2 & msg){
   auto succes=codec.decodeTyped(compressiontype,msg,decompressed_msg);
   std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
   auto duration=std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count();
-  filewithresults << "compressiontype:"+compressiontype+"; duration:"+std::to_string(duration)+"; width:"+std::to_string(msg.width)"; height:"+std::to_string(msg.height)+"; succes:"+(succes ? "true" : "false")+"; bonusinfo:"+bonusinfo+"\n";
+  filewithresults << "compressiontype:"+compressiontype+"; duration:"+std::to_string(duration)+"; width:"+std::to_string(msg.width)+"; height:"+std::to_string(msg.height)+"; succes:"+(succes ? "true" : "false")+"; bonusinfo:"+bonusinfo+"\n";
 
 }
 int main(int argc, char ** argv)
@@ -38,9 +38,9 @@ int main(int argc, char ** argv)
   node->declare_parameter("compressiontype", "raw");
   node->declare_parameter("bonusinfo", "");
 
-  topic=node->get_parameter("topic").as_string();
-  compressiontype=node->get_parameter("compressiontype").as_string();
-  bonusinfo=node->get_parameter("bonusinfo").as_string();
+  topic=std::string(node->get_parameter("topic").as_string();)
+  compressiontype=node->std::string(get_parameter("compressiontype").as_string());
+  bonusinfo=node->std::string(get_parameter("bonusinfo").as_string());
 
   auto subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
   
