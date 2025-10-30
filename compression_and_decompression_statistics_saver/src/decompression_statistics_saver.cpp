@@ -51,7 +51,7 @@ int main(int argc, char ** argv)
           p.get_name().c_str(),
           p.get_type_name().c_str(),
           p.as_string());
-        topic=std::string(p.as_string());
+        topic=static_cast<std::string>(p.as_string());
         subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
       };
   auto cb_compressiontype = [node,compressiontype](const rclcpp::Parameter & p) {
