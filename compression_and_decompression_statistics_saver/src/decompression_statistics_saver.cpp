@@ -3,6 +3,7 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <iostream>
 #include <fstream> 
+#include <point_cloud_interfaces> 
 /*
 std::string global_name, relative_name, default_param;
    3 if (nh.getParam("/global_name", global_name))

@@ -6,16 +6,16 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
+find_package(rclcpp REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(point_cloud_interfaces REQUIRED)
 find_package(point_cloud_transport REQUIRED)
 find_package(point_cloud_transport_plugins REQUIRED)
 find_package(cloudini_lib REQUIRED)
-find_package(cloudini_ros REQUIRED)
 find_package(zlib_point_cloud_transport REQUIRED)
 find_package(zstd_point_cloud_transport REQUIRED)
 find_package(draco_point_cloud_transport REQUIRED)
-find_package(pluginlib REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -30,3 +30,11 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
+
+add_executable(decompression_statistics_saver src/decompression_statistics_saver.cpp)
+ament_target_dependencies(decompression_statistics_saver rclcpp rosbag2_transport sensor_msgs point_cloud_interfaces point_cloud_transport)
+
+install(TARGETS
+  decompression_statistics_saver
+  DESTINATION lib/${PROJECT_NAME}
+)
