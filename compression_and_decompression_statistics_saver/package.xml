@@ -8,7 +8,8 @@
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-
+  <depend>rclcpp</depend>
+  <depend>rosbag2_transport</depend>
   <depend>point_cloud_interfaces</depend>
   <depend>point_cloud_transport</depend>
   <depend>point_cloud_transport_plugins</depend>
