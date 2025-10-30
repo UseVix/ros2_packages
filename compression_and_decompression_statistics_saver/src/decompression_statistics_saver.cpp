@@ -50,8 +50,8 @@ int main(int argc, char ** argv)
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\". Changing subscribed topic",
           p.get_name().c_str(),
           p.get_type_name().c_str(),
-          p.as_str());
-        topic=p.as_str()
+          p.as_string());
+        topic=p.as_string()
         subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
       };
   auto cb_compressiontype = [node](const rclcpp::Parameter & p) {
@@ -59,16 +59,16 @@ int main(int argc, char ** argv)
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\".",
           p.get_name().c_str(),
           p.get_type_name().c_str(),
-          p.as_str());
-        compressiontype=p.as_str()
+          p.as_string());
+        compressiontype=p.as_string()
       };
   auto cb_bonusinfo = [node](const rclcpp::Parameter & p) {
         RCLCPP_INFO(
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\".",
           p.get_name().c_str(),
           p.get_type_name().c_str(),
-          p.as_str());
-        bonusinfo=p.as_str()
+          p.as_string());
+        bonusinfo=p.as_string()
       };
   
   auto cb_handle_topic = param_subscriber_->add_parameter_callback("topic", cb_topic);
