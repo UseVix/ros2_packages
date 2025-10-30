@@ -109,6 +109,7 @@ int main(int argc, char ** argv)
 
   rosbag2_storage::StorageOptions storage_options;
   storage_options.uri = bag_filename;
+  storage_options.storage_id = "sqlite3";
 
   reader_ = rosbag2_transport::ReaderWriterFactory::make_reader(storage_options);
   writer_ = std::make_unique<rosbag2_cpp::Writer>();
