@@ -13,7 +13,7 @@ std::string global_name, relative_name, default_param;
 std::string compressiontype;
 std::string bonusinfo;
 point_cloud_transport::PointCloudCodec codec;
-ofstream filewithresults("filewithresults.txt");
+std::ofstream filewithresults("filewithresults.txt");
 int callback(const point_cloud_interfaces::msg::CompressedPointCloud2 & msg){
   //TODO
   sensor_msgs::msg::PointCloud2 decompressed_msg;
@@ -38,9 +38,9 @@ int main(int argc, char ** argv)
   node->declare_parameter("compressiontype", "raw");
   node->declare_parameter("bonusinfo", "");
 
-  node->getParam("topic", topic);
-  node->getParam("compressiontype", compressiontype);
-  node->getParam("bonusinfo", bonusinfo);
+  topic=node->get_parameter("topic");
+  compressiontype=node->get_parameter("compressiontype");
+  bonusinfo=node->get_parameter("bonusinfo");
 
   auto subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
   
