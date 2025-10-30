@@ -45,24 +45,24 @@ int main(int argc, char ** argv)
   auto subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
   
   auto param_subscriber_ = std::make_shared<rclcpp::ParameterEventHandler>(node);
-  auto cb_topic = [node,topic,subscription_](const rclcpp::Parameter & p) {
+  auto cb_topic = [&node,&topic,&subscription_](const rclcpp::Parameter & p) {
         RCLCPP_INFO(
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\". Changing subscribed topic",
           p.get_name().c_str(),
           p.get_type_name().c_str(),
           p.as_string());
-        topic=static_cast<std::string>(p.as_string());
+        topic=p.as_string();
         subscription_ = node->create_subscription<point_cloud_interfaces::msg::CompressedPointCloud2>(topic, 10,callback);
       };
-  auto cb_compressiontype = [node,compressiontype](const rclcpp::Parameter & p) {
+  auto cb_compressiontype = [&node,&compressiontype](const rclcpp::Parameter & p) {
         RCLCPP_INFO(
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\".",
           p.get_name().c_str(),
           p.get_type_name().c_str(),
           p.as_string());
-        compressiontype=std::string(p.as_string());
+        compressiontype=p.as_string();
       };
-  auto cb_bonusinfo = [node,bonusinfo](const rclcpp::Parameter & p) {
+  auto cb_bonusinfo = [&node,&bonusinfo](const rclcpp::Parameter & p) {
         RCLCPP_INFO(
           node->get_logger(), "cb: Received an update to parameter \"%s\" of type %s: \"%s\".",
           p.get_name().c_str(),
